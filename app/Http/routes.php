@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('wilaya/{wilaya}', 'WilayaController@show');
+Route::get('commune/{commune}', 'CommuneController@show');
