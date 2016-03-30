@@ -1,2 +1,2 @@
 
-echo web: vendor/bin/heroku-php-apache2 localhost/public/ > Procfile
+echo web: vendor/bin/heroku-php-apache2 public > Procfile
