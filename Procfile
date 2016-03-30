@@ -1,1 +1,2 @@
-web: vendor/bin/heroku-php-apache2 algeria_restful/public
+
+web: $(composer config bin-dir)/heroku-php-apache2 algeria_restful/public
