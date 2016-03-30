@@ -14,7 +14,9 @@ class CreateWilayasTable extends Migration
     {
         Schema::create('wilayas', function (Blueprint $table) 
         {
-            $table->integer('id')->unsigned;
+            $table->engine = 'InnoDB';
+
+            $table->integer('id')->unsigned();
             $table->smallInteger('code');
             $table->string('nom', 50);
             $table->timestamps();

@@ -13,5 +13,3 @@ storage/
 .env.php
 .env
 .env.example
-known_hosts
-known_hosts.pub

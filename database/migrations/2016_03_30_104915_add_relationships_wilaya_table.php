@@ -12,10 +12,10 @@ class AddRelationshipsWilayaTable extends Migration
      */
     public function up()
     {
-        Schema::table('communes', function(Blueprint $table){
-            $table->foreign('wilaya_id')
-                ->references('id')
-                ->on('wilayas');
+        Schema::table('communes', function(Blueprint $table)
+        {
+            //$table->engine = 'InnoDB';
+            // $table->foreign('wilaya_id')->references('id')->on('wilayas');
         });
 
     }
@@ -27,8 +27,8 @@ class AddRelationshipsWilayaTable extends Migration
      */
     public function down()
     {
-        Schema::table('communes', function(Blueprint $table){
-            $table->dropForeign('wilayas_wilaya_id_foreign');
-        });
+        // Schema::table('communes', function(Blueprint $table){
+        //     $table->dropForeign('wilayas_wilaya_id_foreign');
+        // });
     }
 }
