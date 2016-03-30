@@ -5,12 +5,15 @@
  * @author othmanus
  */
 
-//
-// Database `algeria-cities`
-//
+namespace App\Helpers\Data;
 
-// `algeria-cities`.`wilayas`
-$wilayas = array(
+class Wilaya
+{
+
+/**
+* @var array $wilayas in Algeria
+*/
+public $wilayas = array(
   array('id' => '1','code' => '1','nom' => 'Adrar'),
   array('id' => '2','code' => '2','nom' => 'Chlef'),
   array('id' => '3','code' => '3','nom' => 'Laghouat'),
@@ -60,3 +63,5 @@ $wilayas = array(
   array('id' => '47','code' => '47','nom' => 'Ghardaïa'),
   array('id' => '48','code' => '48','nom' => 'Relizane')
 );
+
+}

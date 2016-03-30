@@ -5,12 +5,15 @@
  * @author othmanus
  */
 
-//
-// Database `algeria-cities`
-//
+namespace App\Helpers\Data;
 
-// `algeria-cities`.`communes`
-$communes = array(
+class Commune
+{
+
+/**
+* @var array $communes in wilaya
+*/
+public $communes = array(
   array('id' => '1','code_postal' => '01001','nom' => 'Adrar','wilaya_id' => '1'),
   array('id' => '2','code_postal' => '01002','nom' => 'Tamest','wilaya_id' => '1'),
   array('id' => '3','code_postal' => '01003','nom' => 'Charouine','wilaya_id' => '1'),
@@ -1553,3 +1556,5 @@ $communes = array(
   array('id' => '1540','code_postal' => '48037','nom' => 'Merdja Sidi Abed','wilaya_id' => '48'),
   array('id' => '1541','code_postal' => '48038','nom' => 'Ouled Sidi Mihoub','wilaya_id' => '48')
 );
+
+}
