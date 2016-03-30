@@ -42,7 +42,7 @@
                 <h3>Bismillah</h3>
                 <h3>The simple Web Api for getting Communes and Wilayaat in Algeria</h3>
                 <h3>This Api is made for dynamic loading for menus. We are currently working 
-                    on flesshing out key functions.</h3>
+                    on fleshing out key functions.</h3>
                 <h3>Salam</h3>
             </div>
         </div>
