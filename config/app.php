@@ -156,6 +156,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+        Spatie\Fractal\FractalServiceProvider::class
+
+        // Joselfonseca\LaravelApiTools\LaravelApiToolsServiceProvider::class,
+
+        // Dingo\Api\Provider\LaravelServiceProvider::class
+
     ],
 
     /*
