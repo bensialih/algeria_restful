@@ -1,39 +1,59 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Laravel</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+        <script src="{{ asset('js/vue.min.js') }}" ></script>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.12/vue.js"></script>
-
         <link rel="stylesheet" href="{{ elixir('css/token.css') }}">
     </head>
     <body>
         <div class="container">
             <div class="content">
-                    <div id="app" >
-                        @{{ menu }}
-                        <br/>
-                        @{{ greetings }}
-                        <br/>
 
-                        @{{ arr1 }}
-                    </div>
+            <script>
+                window.wilayaat_list = {!! $wilaya !!};
+            </script>
 
-                <script src="{{ elixir('js/app.js') }}"></script>
+            <div id='wilaya_menus' >
+                <select name="parent" class="form-control" v-model="selected_wilaya" 
+                v-on:change="wilayaChange" required>
+                    <option v-for="wilaya in wilayaat" value="@{{ wilaya.nom }}">
+                        @{{ wilaya.nom }}
+                    </option>
+                </select>
                 <br/>
-                <h2 >Algeria: the beautiful</h2>
-                <h3>Bismillah</h3>
-                <h3>The simple Web Api for getting Communes and Wilayaat in Algeria</h3>
-                <h3>This Api is made for dynamic loading for menus. We are currently working 
-                    on fleshing out key functions.</h3>
-                <h3>Salam</h3>
+                <br/>
 
+                <select name="parent" class="form-control" v-model="selected_commune.nom" 
+                v-on:change="communeChange" required >
+                    <option v-for="commune in communes" value="@{{ commune.nom }}" >
+                        @{{ commune.nom }} - @{{ commune.code_postal }}
+                    </option>
+                </select>
+                <br/>
+                <br/>
                 
+                <p v-if="selected_commune.nom" >code postal : @{{ selected_commune.code_postal }}</p>
 
+                <input type="text" v-on:keyup="searchCommune" v-model="searchedCommune" placeholder="find commune">
+                <br/>
+                <ul id='search_list' v-if="communeListDisplay.length > 0" transition="stagger" stagger="100">
+                    <li v-for="item in communeListDisplay" class="@{{item.type}}_colors" v-on:click="getItem( item )" >
+                        @{{ item.nom }}
+                    </li>
+                </ul>
+
+                <br/>
+                @include('includes/text_explanation')
+                <br/>
+                <br/>
+                <p>Abdel Hakim Bensiali</p>
+                    <script src="{{ elixir('js/app.js') }}"></script>
             </div>
+            </div>
+                @include('includes/bottom_images')
         </div>
     </body>
 </html>

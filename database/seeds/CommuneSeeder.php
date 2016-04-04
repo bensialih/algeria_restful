@@ -17,9 +17,6 @@ class CommuneSeeder extends Seeder
      */
     public function run()
     {
-        Commune::truncate();
-        Wilaya::truncate();
-
         $communes = new CommuneData();
         $wilayas = new WilayaData();
 

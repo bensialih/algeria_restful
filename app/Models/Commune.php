@@ -12,7 +12,7 @@ class Commune extends Model
      * @var array
      */
     protected $fillable = [
-        'code_postal', 'nom'
+        'code', 'nom'
     ];
 
     /**

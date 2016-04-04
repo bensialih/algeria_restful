@@ -16,7 +16,7 @@ class CreateWilayasTable extends Migration
         {
             $table->engine = 'InnoDB';
 
-            $table->integer('id')->unsigned();
+            $table->increments('id');
             $table->smallInteger('code');
             $table->string('nom', 50);
             $table->timestamps();

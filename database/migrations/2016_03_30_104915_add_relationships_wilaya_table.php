@@ -14,8 +14,8 @@ class AddRelationshipsWilayaTable extends Migration
     {
         Schema::table('communes', function(Blueprint $table)
         {
-            //$table->engine = 'InnoDB';
-            // $table->foreign('wilaya_id')->references('id')->on('wilayas');
+            $table->engine = 'InnoDB';
+            $table->foreign('wilaya_id')->references('id')->on('wilayas');
         });
 
     }

@@ -23,10 +23,10 @@ class CommuneController extends Controller
             ];
 
             $commune = Commune::where('nom', 'LIKE', "%$commune%")->first();
-            
+
             $response['commune'] = [
                 'id'            => $commune->id,
-                'code_postal'   => $commune->code_postal,
+                'code'          => $commune->code,
                 'nom'           => $commune->nom,
                 'wilaya_id'     => $commune->wilaya_id,
                 'wilaya'        => $commune->wilaya->nom,

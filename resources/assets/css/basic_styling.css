@@ -26,3 +26,23 @@ body {
 .title {
     font-size: 96px;
 }
+
+.intro{
+    color:#008080;
+}
+
+/* always present */
+.expand-transition {
+  transition: all 1.3s ease;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}

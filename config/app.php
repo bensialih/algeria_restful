@@ -160,9 +160,7 @@ return [
         Spatie\Fractal\FractalServiceProvider::class
 
         // Joselfonseca\LaravelApiTools\LaravelApiToolsServiceProvider::class,
-
         // Dingo\Api\Provider\LaravelServiceProvider::class
-
     ],
 
     /*

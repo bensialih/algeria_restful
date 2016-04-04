@@ -12,21 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $wilaya = \App\Models\Wilaya::getAll();
+
+    // return $wilaya;
+    return view('welcome', ['wilaya' => $wilaya] );
 });
-
-Route::get('wilaya/{wilaya}', 'WilayaController@show');
-Route::get('commune/{commune}', 'CommuneController@show');
-
-Route::get('/test', function()
-	{
-		return view('welcome');
-	});
 
 $api = app('Dingo\Api\Routing\Router');
  
 $api->version('v1', function ($api) {
-    $api->get('/all', function() {
-        return ['test' => 'hakim'];
-    });
-});
+            $api->get('/all', '\App\Http\Controllers\AllController@show');
+            $api->get('/wilaya/{wilaya}', '\App\Http\Controllers\WilayaController@show' );
+            $api->get('/commune/{commune}', '\App\Http\Controllers\CommuneController@show');
+
+            $api->get('/search/{commune}', '\App\Http\Controllers\AllController@search');
+        });
+
+    

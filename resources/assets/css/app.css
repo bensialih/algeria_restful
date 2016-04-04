@@ -1,27 +1,66 @@
-html, body {
-                height: 100%;
-            }
+html {
+    height: 100%;
+}
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+}
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+.container {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+.content {
+    text-align: center;
+    display: inline-block;
+}
 
-            .title {
-                font-size: 96px;
-            }
+.title {
+    font-size: 96px;
+}
+
+.wilaya_colors {
+    background-color: #ffe6e6;
+}
+
+.commune_colors {
+    background-color: #e6ffee;
+}
+
+#search_list li {
+    min-width: 250px;
+    cursor: pointer;
+}
+
+#search_list{
+    list-style: none;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    margin:auto;
+    width:40%;
+
+}
+
+#wilaya_menus{
+    padding:30px;
+
+}
+.bismillah_logo{
+    width: 200px;
+    height: 200px;
+}
+.flag_render{
+    height:200px;
+    box-shadow: 5px 5px 5px #888888; 
+}
+h3 {
+    color: #8c8c8c;
+}

@@ -8,8 +8,22 @@ use App\Http\Requests;
 use App\Models\Wilaya;
 use Illuminate\Support\Collection;
 
+use Spatie\Fractal\Fractal;
+
 class WilayaController extends Controller
 {
+    /**
+    * @var Fractal
+    */
+    protected $fractal;
+    
+    /**
+    * @param Fractal $fractal 
+    */
+    public function __construct(Fractal $fractal)
+    {
+        $this->fractal = $fractal;
+    }
 
     /**
      * Display a listing of the wilayas
@@ -18,7 +32,6 @@ class WilayaController extends Controller
      */
     public function show(Request $request, $name)
     {
-
         try{
             $statusCode = 200;
             $response = [
@@ -26,15 +39,13 @@ class WilayaController extends Controller
             ];
 
             $wilaya = Wilaya::where('nom' , 'LIKE', "%$name%")->first();
-
             $communes = collect($wilaya->communes);
 
             $communes = $communes->transform( function($commune, $key ) {
                         return ['id'            => $commune->id,
-                                'code_postal'   => $commune->code_postal,
+                                'code_postal'   => $commune->code,
                                 'nom'           => $commune->nom ];
-
-                    });
+            });
 
             $response['wilaya'] = [
                     'id' => $wilaya->id,

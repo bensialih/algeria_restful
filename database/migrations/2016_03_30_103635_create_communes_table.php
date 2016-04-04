@@ -14,13 +14,11 @@ class CreateCommunesTable extends Migration
     {
         Schema::create('communes', function (Blueprint $table)
         {
-            //$table->engine = 'InnoDB';
-
             $table->increments('id');
-            $table->integer('code_postal');
+            $table->integer('code');
             $table->string('nom', 70);
 
-            $table->integer('wilaya_id')->unsigned()->nullable();
+            $table->integer('wilaya_id')->unsigned();
             $table->timestamps();
         });
     }
