@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
     <head>
         <title>Laravel</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
@@ -8,7 +8,10 @@
         
         <link rel="stylesheet" href="{{ elixir('css/token.css') }}">
     </head>
-    <body>
+    <body  >
+        <div class='bgImage' >
+            <img src='{{ asset("images/background.jpg") }}' style='' />
+            </div>
         <div class="container">
             <div class="content">
 
@@ -46,10 +49,13 @@
                 </ul>
 
                 <br/>
-                @include('includes/text_explanation')
+                <div style='background-color: white;padding: 20px'>
+                    @include('includes/text_explanation')
+                </div>
                 <br/>
                 <br/>
-                <p>Abdel Hakim Bensiali</p>
+                <p>Abdel Hakim <a href='http://www.bensialih.co.uk' >Bensiali</a></p>
+                <p><a href='https://github.com/bensialih/algeria_restful' >github repo</a></p>
                     <script src="{{ elixir('js/app.js') }}"></script>
             </div>
             </div>
