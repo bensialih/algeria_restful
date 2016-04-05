@@ -60,6 +60,7 @@
             </div>
             </div>
                 @include('includes/bottom_images')
+                <p>Images by <a href='https://twitter.com/Sakhreddine' >Sakhreddine</a></p>
         </div>
     </body>
 </html>
