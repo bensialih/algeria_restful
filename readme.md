@@ -1,26 +1,29 @@
-# Laravel PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+# Algeria_RESTful
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Bismillah.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Algeria RESTful is a simple API that can be used in Registration Forms and others.
+The API can be used to auto populate a form depending on the Wilaya or Commune selected.
 
-## Official Documentation
+##Working Example
+Working example up online @ [https://powerful-inlet-61630.herokuapp.com/](https://powerful-inlet-61630.herokuapp.com/).
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Checkout my portfolio @ [www.bensialih.co.uk](http://www.bensialih.co.uk).
+
+##Contributors
+Special thank you to https://github.com/othmanus for providing a data for this project.
+https://github.com/othmanus/algeria-cities
 
 ## Contributing
+Anybody can help with this project. feel free to fork and push. Drop me a message and Insha Allah we can create something beautiful and useful.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+    "Allah loves, when one of you is doing something, that he [or she] does it in the most excellent manner."
+        Prophet Muhammad (ASWS)
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Basic testing carried out on this API. Would like to write more extensive testing of endpoints using Behat. and is on the books to do so.
 
 ## License
 
